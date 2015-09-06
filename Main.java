@@ -3,16 +3,17 @@ package al.androidfire;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
         printHeader();
         System.out.println(" \n \n 1) JSON Validator " +
-                "\n 2) Check Divisibility \n");
+                "\n 2) Check Divisibility" +
+                "\n 3) Hex \n");
         System.out.println("CHOICE :- ");
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
 
             String CHOICE = scanner.next();
+
 
             switch (CHOICE) {
 
@@ -61,7 +62,7 @@ public class Main {
                         int a = scanner.nextInt();
                         System.out.println( "Enter number to be divided with" );
 
-                        while (scanner.hasNextInt() ) {
+                        while (scanner.hasNext() ) {
                             int b = scanner.nextInt();
                             if (Math.checkDisability(a,b)) {
                                 System.out.println("Your number "+a+" which is divisible by "+b);
@@ -70,6 +71,33 @@ public class Main {
                             }
                             System.exit(0);
 
+                        }
+                    }
+
+                    break;
+                case "3":
+                    System.out.println("Enter algorithm");
+
+                    while (scanner.hasNext()) {
+
+                        System.out.println(" 1) String to Hex \n 2) Hex to String");
+
+                        String codes = scanner.next();
+
+                        while (scanner.hasNext() ) {
+
+                            switch (scanner.next()) {
+                                case "1":
+                                    System.out.println("Result is below \n");
+                                    System.out.println(Hex.toHexString(codes));
+                                    break;
+                                case "2":
+
+                                    System.out.println("Result is below \n");
+                                    System.out.println(Hex.fromHexString(codes));
+
+                                    break;
+                            }
                         }
                     }
 

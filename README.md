@@ -5,3 +5,4 @@
 
 1) JSON Validator
 2) Check Divisibility
+3) Hex

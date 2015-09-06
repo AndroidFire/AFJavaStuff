@@ -6,7 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
         printHeader();
-        System.out.println(" \n \n 1) JSON Validator \n");
+        System.out.println(" \n \n 1) JSON Validator " +
+                "\n 2) Check Divisibility \n");
         System.out.println("CHOICE :- ");
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
@@ -50,6 +51,25 @@ public class Main {
                                     System.out.println("Something Went Wrong");
                                     System.exit(0);
                             }
+                        }
+                    }
+                case "2":
+                    System.out.println("Enter a desired number");
+
+                    while (scanner.hasNext()) {
+
+                        int a = scanner.nextInt();
+                        System.out.println( "Enter number to be divided with" );
+
+                        while (scanner.hasNextInt() ) {
+                            int b = scanner.nextInt();
+                            if (Math.checkDisability(a,b)) {
+                                System.out.println("Your number "+a+" which is divisible by "+b);
+                            }else {
+                                System.out.println("Your number "+a+" which is not divisible by "+b);
+                            }
+                            System.exit(0);
+
                         }
                     }
 
